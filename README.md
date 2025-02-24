@@ -15,4 +15,16 @@ my-finance-manager/
 │   ├── routes/            # Express routes
 │   ├── server.js          # Entry point for Node.js backend
 │   └── config/            # MongoDB connection and configurations
-└── package.json           # Project dependencies```
+└── package.json           # Project dependencies
+```
+## 2. Backend Setup (Node/Express):
+
+-1. Initialize the backend:
+```
+mkdir server
+cd server
+npm init -y
+npm install express mongoose cors dotenv
+```
+-2.Create <b>server.js</b>:
+
