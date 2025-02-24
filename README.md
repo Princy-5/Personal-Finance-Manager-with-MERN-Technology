@@ -1,6 +1,7 @@
 # Personal-Finance-Manager-with-MERN-Technology
 ## 1. Project Setup (Folder Structure):
-'''my-finance-manager/
+```
+my-finance-manager/
 ├── client/                # React frontend
 │   ├── public/
 │   ├── src/
@@ -14,4 +15,4 @@
 │   ├── routes/            # Express routes
 │   ├── server.js          # Entry point for Node.js backend
 │   └── config/            # MongoDB connection and configurations
-└── package.json           # Project dependencies'''
+└── package.json           # Project dependencies```
