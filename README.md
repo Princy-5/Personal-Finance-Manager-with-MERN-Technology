@@ -26,7 +26,7 @@ cd server
 npm init -y
 npm install express mongoose cors dotenv
 ```
-* 2.Create <b>server.js</b>:
+* 2. Create <b>server.js</b>:
   
 ```
 const express = require("express");
@@ -48,7 +48,7 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 ```
-* 3.Create .env for environment variables:
+* 3. Create .env for environment variables:
 
 ```
  MONGO_URI=your_mongodb_connection_string
@@ -61,6 +61,74 @@ app.listen(port, () => {
   cd client
   npm start
 ```
+## Basic React Component:
+
+* Inside <b>src/components</b>, create a simple component:
+```
+import React from 'react';
+
+function Welcome() {
+  return <h1>Welcome to the Personal Finance Manager!</h1>;
+}
+
+export default Welcome;
+```
+* Update <b>App.js</b> to use the Welcome component:
+
+```
+import React from 'react';
+import './App.css';
+import Welcome from './components/Welcome';
+
+function App() {
+  return (
+    <div className="App">
+      <Welcome />
+    </div>
+  );
+}
+export default App;
+```
+## 4. Connecting Frontend to Backend:
+
+* In client/src/App.js, use fetch to retrieve data from the backend:
+
+```
+// client/src/App.js
+import React, { useEffect, useState } from "react";
+import './App.css';
+
+function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000")
+      .then((response) => response.text())
+      .then((data) => setMessage(data));
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>{message}</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+## 5. Test and Push the Changes:
+
+* 1. Run the Backend:
+```
+cd server
+node server.js
+```
+* 2. Run the Frontend:
+```
+cd client
+npm start
+```
+
 
 
 
